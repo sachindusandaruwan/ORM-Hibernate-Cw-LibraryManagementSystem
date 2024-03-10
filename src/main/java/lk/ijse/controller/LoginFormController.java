@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import lk.ijse.Launcher;
 import lk.ijse.service.ServiceFactory;
 import lk.ijse.service.UserService;
 
@@ -23,10 +24,27 @@ public class LoginFormController {
 
     @FXML
     private TextField txtUsername;
+    public static String userName;
     UserService userService=(UserService) ServiceFactory.getServiceFactory().getService(ServiceFactory.ServiceTypes.USER);
 
     @FXML
-    void btnLoginOnAction(ActionEvent event) {
+    void btnLoginOnAction(ActionEvent event) throws IOException {
+        userName = txtUsername.getText();
+        if (txtUsername.equals(null) || txtUsername.getText().equals("admin")) {
+
+            Launcher.stageLogIn.close();
+
+            Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/adminDashBoardForm.fxml"));
+
+            Scene scene = new Scene(rootNode);
+
+            Stage stage = new Stage();
+            stage.setTitle("home page");
+
+            stage.setScene(scene);
+            stage.show();
+
+        }
 
     }
 

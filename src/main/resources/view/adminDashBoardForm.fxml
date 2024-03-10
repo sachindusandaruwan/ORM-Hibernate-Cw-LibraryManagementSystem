@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="676.0" prefWidth="1200.0" style="-fx-background-color: #271D10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashBoardFormController">
+   <children>
+      <AnchorPane prefHeight="676.0" prefWidth="214.0" style="-fx-background-color: white;">
+         <children>
+            <Button layoutX="23.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnUserManageOnAction" prefHeight="27.0" prefWidth="162.0" style="-fx-background-radius: 40; -fx-background-color: #271D10;" text="User Management" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnBookManageOnAction" prefHeight="27.0" prefWidth="162.0" style="-fx-background-radius: 40;" text="Book Management" textFill="#271d10">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnBranchesManageOnAction" prefHeight="27.0" prefWidth="162.0" style="-fx-background-radius: 40; -fx-background-color: #271D10;" text="Branches Management" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="23.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnHistoryDetailsOnAction" prefHeight="27.0" prefWidth="162.0" style="-fx-background-radius: 40;" text="History Detail" textFill="#271d10">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="17.0" layoutY="8.0" prefHeight="35.0" prefWidth="71.0" text="Hello">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="38.0" prefHeight="35.0" prefWidth="114.0" text="Admin">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="contentContext" layoutX="215.0" layoutY="47.0" prefHeight="628.0" prefWidth="986.0">
+         <children>
+            <Separator layoutY="-5.0" prefHeight="5.0" prefWidth="986.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblDateAndTime" layoutX="847.0" layoutY="7.0" prefHeight="35.0" prefWidth="329.0" text="Label" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

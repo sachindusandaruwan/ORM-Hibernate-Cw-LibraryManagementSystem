@@ -1,5 +1,6 @@
 package lk.ijse.service.impl;
 
+import lk.ijse.dto.UserDto;
 import lk.ijse.entity.User;
 import lk.ijse.projection.UserIds;
 import lk.ijse.repository.RepositoryFactory;
@@ -9,6 +10,7 @@ import lk.ijse.util.SessionFactoryConfig;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
@@ -17,12 +19,12 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository = (UserRepository) RepositoryFactory.getRepositoryFactory().getRepository(RepositoryFactory.RepositoryTypes.USER);
 
     @Override
-    public Long save(User user) {
+    public Long saveUsers(UserDto user) {
         session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try{
             userRepository.setSession(session);
-            Long id = userRepository.save(user);
+            Long id = userRepository.save(user.toEntity());;
             transaction.commit();
             session.close();
             return id;
@@ -35,8 +37,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAll() {
-        return null;
+    public List<UserDto> getAllUsers() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        userRepository.setSession(session);
+        List<User> allUsers = userRepository.getAll();
+        List<UserDto> dtoList = new ArrayList<>();
+        for (User user : allUsers){
+            dtoList.add(user.toDto());
+        }
+        return dtoList;
     }
 
     @Override

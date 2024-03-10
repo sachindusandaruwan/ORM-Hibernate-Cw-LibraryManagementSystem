@@ -10,9 +10,10 @@ import lombok.ToString;
 @Data
 @ToString
 public class UserTm {
-    private long id;
+    private long u_Id;
     private String name;
     private int age;
     private String city;
     private String eMail;
+    private String phoneNo;
 }

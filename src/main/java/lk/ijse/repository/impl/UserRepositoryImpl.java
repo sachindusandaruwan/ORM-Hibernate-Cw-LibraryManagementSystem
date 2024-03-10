@@ -1,9 +1,11 @@
 package lk.ijse.repository.impl;
 
+import lk.ijse.dto.UserDto;
 import lk.ijse.entity.User;
 import lk.ijse.projection.UserIds;
 import lk.ijse.repository.UserRepository;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -35,7 +37,11 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public List<User> getAll() {
-        return null;
+        String sqlQuery = "FROM User";
+        Query query = session.createQuery(sqlQuery);
+        List list = query.list();
+        session.close();
+        return list;
     }
 
     @Override

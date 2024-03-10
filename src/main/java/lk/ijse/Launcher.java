@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Launcher extends Application {
+    public static Stage stageLogIn;
     public static void main(String[] args) {
         launch(args);
     }
@@ -14,6 +15,7 @@ public class Launcher extends Application {
     public void start(Stage stage) throws Exception {
         Parent rootNode= FXMLLoader.load(this.getClass().getResource("/view/loginForm.fxml"));
         Scene scene=new Scene(rootNode);
+        stageLogIn = stage;
         stage.centerOnScreen();
         stage.setScene(scene);
         stage.show();

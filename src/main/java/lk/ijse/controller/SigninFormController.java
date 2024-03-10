@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import lk.ijse.dto.UserDto;
 import lk.ijse.embeded.NameIdentifier;
 import lk.ijse.entity.User;
 import lk.ijse.service.ServiceFactory;
@@ -37,6 +38,9 @@ public class SigninFormController {
 
     @FXML
     private TextField txtUsername;
+    @FXML
+    private TextField txtPhoneNo;
+
     UserService userService = (UserService) ServiceFactory.getServiceFactory().getService(ServiceFactory.ServiceTypes.USER);
 
 
@@ -52,11 +56,14 @@ public class SigninFormController {
                 txtMname.getText(),
                 txtLname.getText()
         );
-        Long id = userService.save(new User(
+
+        //userService=UserBo
+        Long id = userService.saveUsers(new UserDto(
                 nameIdentifier,
                 Integer.parseInt(txtAge.getText()),
                 txtCity.getText(),
                 txtEmail.getText(),
+                txtPhoneNo.getText(),
                 txtUsername.getText(),
                 txtPassword.getText()
         ));
