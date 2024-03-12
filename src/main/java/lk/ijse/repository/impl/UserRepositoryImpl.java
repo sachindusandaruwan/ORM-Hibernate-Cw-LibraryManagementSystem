@@ -11,6 +11,7 @@ import java.util.List;
 
 public class UserRepositoryImpl implements UserRepository {
     private Session session;
+
     public void setSession(Session session){
         this.session = session;
     }
@@ -20,8 +21,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void update(User object) {
-
+    public void update(User user) {
+        session.update(user);
     }
 
     @Override
@@ -30,7 +31,8 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public void delete(User object) {
+    public void delete(User user) {
+        session.delete(user);
 
     }
 

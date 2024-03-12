@@ -10,4 +10,5 @@ public interface UserRepository extends CrudRepository<User,Long> {
     public void setSession(Session session);
     public List<User> getAll();
     public List<UserIds> getAllIds();
+
 }

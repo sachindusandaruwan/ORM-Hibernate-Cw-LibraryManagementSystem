@@ -4,15 +4,20 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import lk.ijse.dto.UserDto;
 import lk.ijse.service.ServiceFactory;
 import lk.ijse.service.UserService;
 import lk.ijse.tmList.UserTm;
 
+import java.io.IOException;
 import java.util.List;
 
 public class UserManageFormController {
@@ -42,6 +47,7 @@ public class UserManageFormController {
     private ImageView userMangement;
     @FXML
     private TableColumn<?, ?> colName;
+    static Stage stage = new Stage();
 
     UserService userService=(UserService) ServiceFactory.getServiceFactory().getService(ServiceFactory.ServiceTypes.USER);
 
@@ -89,6 +95,15 @@ public class UserManageFormController {
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
 
+    }
+    @FXML
+    void btnClickHere(ActionEvent event) throws IOException {
+       FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("/view/userCrudForm.fxml"));
+       Parent root=fxmlLoader.load();
+       Scene scene=new Scene(root);
+
+       stage.setScene(scene);
+       stage.show();
     }
 
 }
