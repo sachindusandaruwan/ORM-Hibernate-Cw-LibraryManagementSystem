@@ -30,7 +30,8 @@ public class AdminDashBoardFormController {
     }
 
     @FXML
-    void btnBranchesManageOnAction(ActionEvent event) {
+    void btnBranchesManageOnAction(ActionEvent event) throws IOException {
+        Navigation.switchPaging(contentContext,"BranchesForm.fxml","Branches");
 
     }
 
