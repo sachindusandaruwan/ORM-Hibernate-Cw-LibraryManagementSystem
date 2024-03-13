@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="628.0" prefWidth="986.0" style="-fx-background-color: #271D10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LibraryFormController">
+   <children>
+      <ImageView fx:id="userMangement" fitHeight="565.0" fitWidth="347.0" layoutX="518.0" layoutY="48.0">
+         <image>
+            <Image url="@../assest/book___b-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblBookManage" layoutX="36.0" layoutY="101.0" opacity="0.71" prefHeight="435.0" prefWidth="902.0">
+         <columns>
+            <TableColumn fx:id="colB_Id" prefWidth="100.0" text="Book_Id" />
+            <TableColumn fx:id="colBName" prefWidth="200.0" text="Book_Name" />
+            <TableColumn fx:id="colAutor" prefWidth="100.0" text="Autor" />
+            <TableColumn fx:id="colGener" prefWidth="125.0" text="Gener" />
+            <TableColumn fx:id="colPubDate" prefWidth="175.0" text="Publication Date" />
+            <TableColumn fx:id="colPrice" prefWidth="125.0" text="Book Price" />
+            <TableColumn fx:id="colAvailability" prefWidth="75.0" text="Availability" />
+         </columns>
+      </TableView>
+      <Label layoutX="36.0" layoutY="40.0" prefHeight="49.0" prefWidth="76.0" text="Book" textFill="#eaff00">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="40.0" prefHeight="49.0" prefWidth="192.0" text="Management" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="52.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="41.0" prefWidth="123.0" text=" " />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="59.0" layoutY="568.0">
+         <image>
+            <Image url="@../assest/icon/icons8-delete-30.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="102.0" layoutY="566.0" prefHeight="30.0" prefWidth="61.0" text="Delete">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="223.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="41.0" prefWidth="123.0" style="-fx-background-color: #eaff00;" text=" " />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="233.0" layoutY="568.0">
+         <image>
+            <Image url="@../assest/icon/icons8-update-64.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="271.0" layoutY="565.0" prefHeight="30.0" prefWidth="61.0" text="Update">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="405.0" layoutY="560.0" mnemonicParsing="false" onAction="#btnViewBookOnAction" prefHeight="41.0" prefWidth="114.0" text="View Book" />
+      <Button layoutX="877.0" layoutY="65.0" mnemonicParsing="false" onAction="#btnAddOnActiom" prefHeight="25.0" prefWidth="45.0" text="Add" />
+   </children>
+</AnchorPane>

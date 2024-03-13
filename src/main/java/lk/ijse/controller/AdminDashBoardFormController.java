@@ -19,13 +19,14 @@ public class AdminDashBoardFormController {
 
     public void initialize() throws IOException {
         DateAndTime.manageDateAndTime(lblDateAndTime);
-        Navigation.switchPaging(contentContext,"UserManageForm.fxml","Dashboard");
+        Navigation.switchPaging(contentContext,"UserManageForm.fxml","Users");
     }
 
 
     @FXML
-    void btnBookManageOnAction(ActionEvent event) {
+    void btnBookManageOnAction(ActionEvent event) throws IOException {
 
+        Navigation.switchPaging(contentContext,"libraryForm.fxml","LibraryBooks");
     }
 
     @FXML
