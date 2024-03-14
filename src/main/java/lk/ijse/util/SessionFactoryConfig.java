@@ -1,12 +1,11 @@
 package lk.ijse.util;
 
-import lk.ijse.entity.Book;
-import lk.ijse.entity.Branch;
-import lk.ijse.entity.User;
+import lk.ijse.entity.*;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Order;
 
 public class SessionFactoryConfig {
     private static SessionFactoryConfig factoryConfiguration;
@@ -23,6 +22,8 @@ public class SessionFactoryConfig {
                 .addAnnotatedClass(User.class)
                 .addAnnotatedClass(Book.class)
                 .addAnnotatedClass(Branch.class)
+                .addAnnotatedClass(Orders.class)
+                .addAnnotatedClass(OrderDetail.class)
                 .buildSessionFactory();
     }
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: red; -fx-border-width: 0 0 2 0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Row.RowFormController">
+   <children>
+      <Label fx:id="lblidAndAvailability" layoutX="6.0" layoutY="11.0" prefHeight="25.0" prefWidth="160.0" text="ID AND AVAILABILTY">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

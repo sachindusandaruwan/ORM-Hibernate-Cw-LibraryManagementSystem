@@ -1,6 +1,7 @@
 package lk.ijse.service;
 
 import lk.ijse.dto.BookDto;
+import lk.ijse.projection.BookIdsAndAvailability;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface BookService extends  SuperService{
 
 
     boolean updateBook(BookDto bookDto);
+
+    List<BookIdsAndAvailability> getBookIdsAndAvailablityCustomerSearch(String bookName);
 }

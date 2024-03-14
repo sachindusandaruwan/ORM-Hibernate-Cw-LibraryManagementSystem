@@ -99,4 +99,23 @@ public class UserServiceImpl implements UserService {
             return false;
         }
     }
+
+    @Override
+    public boolean isExists(String userName) {
+        session = SessionFactoryConfig.getInstance().getSession();
+        userRepository.setSession(session);
+        Long exists = userRepository.isExists(userName);
+        return exists!=0;
+    }
+
+    @Override
+    public UserDto getUserUsingUsername(String userName) {
+        session = SessionFactoryConfig.getInstance().getSession();
+        userRepository.setSession(session);
+        User user = userRepository.getCustomerUsingUsername(userName);
+        session.close();
+        return user.toDto();
+    }
+
+
 }

@@ -2,6 +2,7 @@ package lk.ijse.service.impl;
 
 import lk.ijse.dto.BookDto;
 import lk.ijse.entity.Book;
+import lk.ijse.projection.BookIdsAndAvailability;
 import lk.ijse.repository.BookRepository;
 import lk.ijse.repository.RepositoryFactory;
 import lk.ijse.service.BookService;
@@ -102,6 +103,14 @@ public class BookServiceImpl implements BookService {
         }
     }
 
+    @Override
+    public List<BookIdsAndAvailability> getBookIdsAndAvailablityCustomerSearch(String bookName) {
+        session = SessionFactoryConfig.getInstance().getSession();
+        bookRepository.setSession(session);
+        System.out.println("test 2");
+        List<BookIdsAndAvailability> idsAndTitles = bookRepository.getBookIdAndAvailability(bookName);
+        return idsAndTitles;
+    }
 
 //    public Long saveUsers(UserDto user) {
 //        session = SessionFactoryConfig.getInstance().getSession();

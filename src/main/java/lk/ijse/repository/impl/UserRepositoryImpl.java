@@ -50,4 +50,22 @@ public class UserRepositoryImpl implements UserRepository {
     public List<UserIds> getAllIds() {
         return null;
     }
+
+    @Override
+    public Long isExists(String userName) {
+        String hql = "SELECT COUNT(*) FROM User WHERE userName = :username";
+        Query<Long> query = session.createQuery(hql, Long.class);
+        query.setParameter("username", userName);
+
+        // Execute query
+        return query.uniqueResult();
+    }
+
+    @Override
+    public User getCustomerUsingUsername(String username) {
+        String hql = "FROM User WHERE userName = :userName";
+        Query<User> query = session.createQuery(hql, User.class);
+        query.setParameter("userName", username);
+        return query.uniqueResult();
+    }
 }

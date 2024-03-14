@@ -1,9 +1,6 @@
 package lk.ijse.service;
 
-import lk.ijse.service.impl.BookServiceImpl;
-import lk.ijse.service.impl.BranchServiceImpl;
-import lk.ijse.service.impl.LoginServiceImpl;
-import lk.ijse.service.impl.UserServiceImpl;
+import lk.ijse.service.impl.*;
 
 public class ServiceFactory {
     static ServiceFactory serviceFactory;
@@ -13,7 +10,7 @@ public class ServiceFactory {
         return serviceFactory == null ? new ServiceFactory() : serviceFactory;
     }
     public enum ServiceTypes{
-        LOGIN, USER,BOOK,BRANCH
+        LOGIN, USER,BOOK,BRANCH,ORDER,ORDER_DETAIL,PLACE_ORDER
     }
 
     public SuperService getService(ServiceTypes serviceTypes){
@@ -22,6 +19,9 @@ public class ServiceFactory {
             case USER: return new UserServiceImpl();
             case BOOK:return new BookServiceImpl();
             case BRANCH:return new BranchServiceImpl();
+            case ORDER:return new OrderServiceImpl();
+            case ORDER_DETAIL:return new OrderDetailServiceImpl();
+            case PLACE_ORDER:return new PlaceOrderServiceImpl();
             default: return null;
         }
     }

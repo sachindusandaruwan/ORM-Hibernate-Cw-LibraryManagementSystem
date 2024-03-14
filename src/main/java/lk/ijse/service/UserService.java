@@ -12,4 +12,10 @@ public interface UserService extends SuperService{
     public UserDto getUser(long id);
     public boolean deleteUser(UserDto userDto);
     public boolean updateUser(UserDto userDto);
+
+    boolean isExists(String userName);
+
+    UserDto getUserUsingUsername(String userName);
+
+
 }
