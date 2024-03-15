@@ -49,6 +49,9 @@ public class BookServiceImpl implements BookService {
 
         bookRepository.setSession(session);
         List<Book> allBooks=bookRepository.getAll();
+
+        System.out.println("kalakanniya");
+        System.out.println(allBooks);
         List<BookDto> dtoList=new ArrayList<>();
         for (Book book: allBooks){
             dtoList.add(book.toDto());
@@ -110,6 +113,15 @@ public class BookServiceImpl implements BookService {
         System.out.println("test 2");
         List<BookIdsAndAvailability> idsAndTitles = bookRepository.getBookIdAndAvailability(bookName);
         return idsAndTitles;
+    }
+
+    @Override
+    public long getBookCount() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        bookRepository.setSession(session);
+        Long bookCount = bookRepository.getBookCount();
+        session.close();
+        return bookCount;
     }
 
 //    public Long saveUsers(UserDto user) {

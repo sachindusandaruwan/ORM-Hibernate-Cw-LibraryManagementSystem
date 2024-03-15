@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="628.0" prefWidth="986.0" style="-fx-background-color: #271D10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserDashEnterController">
+   <children>
+      <ImageView fitHeight="532.0" fitWidth="347.0" layoutX="518.0" layoutY="89.0">
+         <image>
+            <Image url="@../assest/book___b-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="36.0" layoutY="40.0" prefHeight="49.0" prefWidth="90.0" text="Books" textFill="#eaff00">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="40.0" prefHeight="49.0" prefWidth="192.0" text="Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblBookManage" layoutX="47.0" layoutY="161.0" opacity="0.8" prefHeight="448.0" prefWidth="900.0">
+         <columns>
+            <TableColumn fx:id="colB_Id" prefWidth="100.0" text="Book_Id" />
+            <TableColumn fx:id="colBName" prefWidth="200.0" text="Book Name" />
+            <TableColumn fx:id="colAutor" prefWidth="200.0" text="Autor" />
+            <TableColumn fx:id="colGener" prefWidth="200.0" text="Gener" />
+            <TableColumn fx:id="colPubDate" prefWidth="200.0" text="Publication Date" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="462.0" layoutY="21.0" opacity="0.5" prefHeight="118.0" prefWidth="192.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Label fx:id="lblBooksCount" layoutX="102.0" layoutY="30.0" prefHeight="70.0" prefWidth="83.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="22.0" layoutY="44.0">
+               <image>
+                  <Image url="@../assest/icon/icons8-books-50.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="38.0" layoutY="10.0" prefHeight="17.0" prefWidth="131.0" text="Total Books">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="755.0" layoutY="21.0" opacity="0.5" prefHeight="118.0" prefWidth="192.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Label fx:id="lblMembersCount" layoutX="101.0" layoutY="37.0" prefHeight="70.0" prefWidth="83.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="11.0" prefHeight="17.0" prefWidth="131.0" text="Total Members">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="30.0" layoutY="42.0">
+               <image>
+                  <Image url="@../assest/icon/icons8-people-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

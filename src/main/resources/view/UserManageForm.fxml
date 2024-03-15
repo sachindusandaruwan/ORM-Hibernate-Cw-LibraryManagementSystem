@@ -36,33 +36,11 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="52.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="41.0" prefWidth="123.0" text=" " />
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="59.0" layoutY="568.0">
-         <image>
-            <Image url="@../assest/icon/icons8-delete-30.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="102.0" layoutY="566.0" prefHeight="30.0" prefWidth="61.0" text="Delete">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="223.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="41.0" prefWidth="123.0" style="-fx-background-color: #eaff00;" text=" " />
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="233.0" layoutY="568.0">
-         <image>
-            <Image url="@../assest/icon/icons8-update-64.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="271.0" layoutY="565.0" prefHeight="30.0" prefWidth="61.0" text="Update">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="395.0" layoutY="558.0" prefHeight="30.0" prefWidth="384.0" text="Do You Want Delete,Update,Or Search User" textFill="WHITE">
+      <Label layoutX="35.0" layoutY="568.0" prefHeight="30.0" prefWidth="406.0" text="Do You Want Delete,Update,Or Search User --&gt;" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="792.0" layoutY="561.0" mnemonicParsing="false" onAction="#btnClickHere" prefHeight="25.0" prefWidth="89.0" text="Click Here" />
+      <Button layoutX="461.0" layoutY="566.0" mnemonicParsing="false" onAction="#btnClickHere" prefHeight="30.0" prefWidth="111.0" text="Click Here" />
    </children>
 </AnchorPane>

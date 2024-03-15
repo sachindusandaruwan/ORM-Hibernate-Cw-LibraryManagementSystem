@@ -119,5 +119,14 @@ public class UserServiceImpl implements UserService {
         return user.toDto();
     }
 
+    @Override
+    public long getCustomerCount() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        userRepository.setSession(session);
+        Long customerCount = userRepository.getCustomerCount();
+        session.close();
+        return customerCount;
+    }
+
 
 }

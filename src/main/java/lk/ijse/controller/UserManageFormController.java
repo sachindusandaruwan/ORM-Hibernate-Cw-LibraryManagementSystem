@@ -98,7 +98,7 @@ public class UserManageFormController {
     }
     @FXML
     void btnClickHere(ActionEvent event) throws IOException {
-       FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("/view/userCrudForm.fxml"));
+       FXMLLoader fxmlLoader=new FXMLLoader(getClass().getResource("/view/UserCrudForm.fxml"));
        Parent root=fxmlLoader.load();
        Scene scene=new Scene(root);
 

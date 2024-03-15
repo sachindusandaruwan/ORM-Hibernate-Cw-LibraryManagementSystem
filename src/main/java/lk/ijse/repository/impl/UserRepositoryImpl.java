@@ -68,4 +68,10 @@ public class UserRepositoryImpl implements UserRepository {
         query.setParameter("userName", username);
         return query.uniqueResult();
     }
+
+    @Override
+    public Long getCustomerCount() {
+        Query query = session.createQuery("select count(*) from User ");
+        return (Long) query.uniqueResult();
+    }
 }

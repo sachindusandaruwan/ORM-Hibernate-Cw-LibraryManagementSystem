@@ -14,4 +14,6 @@ public interface BookRepository extends CrudRepository<Book, Long>{
 
 
     List<BookIdsAndAvailability> getBookIdAndAvailability(String bookName);
+
+    Long getBookCount();
 }

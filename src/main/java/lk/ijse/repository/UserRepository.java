@@ -14,4 +14,6 @@ public interface UserRepository extends CrudRepository<User,Long> {
     Long isExists(String userName);
 
     User getCustomerUsingUsername(String userName);
+
+    Long getCustomerCount();
 }

@@ -48,7 +48,11 @@ public class BookRepositoryImpl implements BookRepository {
         return resultList;
     }
 
-
+    @Override
+    public Long getBookCount() {
+        Query query = session.createQuery("select count(*) from Book ");
+        return (Long) query.uniqueResult();
+    }
 
 
     @Override

@@ -18,4 +18,6 @@ public interface BookService extends  SuperService{
     boolean updateBook(BookDto bookDto);
 
     List<BookIdsAndAvailability> getBookIdsAndAvailablityCustomerSearch(String bookName);
+
+    long getBookCount();
 }

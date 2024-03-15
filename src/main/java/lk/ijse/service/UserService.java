@@ -18,5 +18,5 @@ public interface UserService extends SuperService{
     UserDto getUserUsingUsername(String userName);
 
 
-
+    long getCustomerCount();
 }
