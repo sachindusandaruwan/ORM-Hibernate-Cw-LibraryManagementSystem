@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="676.0" prefWidth="1200.0" style="-fx-background-color: #271D10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashBoardFormController">
    <children>
       <AnchorPane prefHeight="676.0" prefWidth="214.0" style="-fx-background-color: white;">
@@ -26,7 +25,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="23.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnHistoryDetailsOnAction" prefHeight="27.0" prefWidth="162.0" style="-fx-background-radius: 40;" text="History Detail" textFill="#271d10">
+            <Button layoutX="23.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnHistoryDetailsOnAction" prefHeight="27.0" prefWidth="162.0" style="-fx-background-radius: 40;" text="Manage Detail" textFill="#271d10">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>

@@ -12,4 +12,6 @@ public interface OrderRepository extends CrudRepository<Orders,Long>{
     List getOrderId();
 
     List<Orders> getOrderByUserId(User entity);
+
+    List<Orders> getAll();
 }

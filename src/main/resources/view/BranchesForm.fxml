@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="628.0" prefWidth="986.0" style="-fx-background-color: #271D10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BranchesFormController">
    <children>
-      <ImageView fx:id="userMangement" fitHeight="565.0" fitWidth="347.0" layoutX="518.0" layoutY="48.0">
+      <ImageView fx:id="userMangement" fitHeight="565.0" fitWidth="347.0" layoutX="518.0" layoutY="34.0">
          <image>
             <Image url="@../assest/book___b-removebg-preview.png" />
          </image>
@@ -35,34 +35,12 @@
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="52.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="41.0" prefWidth="123.0" text=" " />
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="59.0" layoutY="568.0">
-         <image>
-            <Image url="@../assest/icon/icons8-delete-30.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="102.0" layoutY="566.0" prefHeight="30.0" prefWidth="61.0" text="Delete">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="223.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="41.0" prefWidth="123.0" style="-fx-background-color: #eaff00;" text=" " />
-      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="233.0" layoutY="568.0">
-         <image>
-            <Image url="@../assest/icon/icons8-update-64.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="271.0" layoutY="565.0" prefHeight="30.0" prefWidth="61.0" text="Update">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="377.0" layoutY="558.0" prefHeight="30.0" prefWidth="402.0" text="Do You Want Delete,Update,Or Search Branch" textFill="WHITE">
+      <Label layoutX="36.0" layoutY="559.0" prefHeight="30.0" prefWidth="434.0" text="Do You Want Delete,Update,Or Search Branch  - &gt;" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="792.0" layoutY="561.0" mnemonicParsing="false" onAction="#btnClickHere" prefHeight="25.0" prefWidth="89.0" text="Click Here" />
-      <Button layoutX="881.0" layoutY="52.0" mnemonicParsing="false" onAction="#btnAddOnAction" text="Add" />
+      <Button layoutX="493.0" layoutY="562.0" mnemonicParsing="false" onAction="#btnClickHere" prefHeight="25.0" prefWidth="89.0" style="-fx-border-color: yellow; -fx-background-color: yellow;" text="Click Here" />
+      <Button layoutX="878.0" layoutY="52.0" mnemonicParsing="false" onAction="#btnAddOnAction" style="-fx-background-color: red;" text="Add +" />
    </children>
 </AnchorPane>

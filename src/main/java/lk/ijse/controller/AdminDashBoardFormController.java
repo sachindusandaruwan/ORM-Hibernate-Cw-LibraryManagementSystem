@@ -36,7 +36,9 @@ public class AdminDashBoardFormController {
     }
 
     @FXML
-    void btnHistoryDetailsOnAction(ActionEvent event) {
+    void btnHistoryDetailsOnAction(ActionEvent event) throws IOException {
+        Navigation.switchPaging(contentContext,"DetailsForm.fxml","BookDetails");
+
 
     }
 

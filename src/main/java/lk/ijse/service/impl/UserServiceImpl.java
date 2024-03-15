@@ -57,6 +57,8 @@ public class UserServiceImpl implements UserService {
     public UserDto getUser(long id) {
          session=SessionFactoryConfig.getInstance().getSession();
          userRepository.setSession(session);
+        System.out.println("tea 1");
+        System.out.println(id);
          UserDto userDto= userRepository.get(id).toDto();
          session.close();
          return userDto;

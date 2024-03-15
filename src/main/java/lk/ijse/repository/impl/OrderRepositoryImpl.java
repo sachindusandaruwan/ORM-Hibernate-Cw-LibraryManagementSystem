@@ -21,13 +21,14 @@ public class OrderRepositoryImpl implements OrderRepository {
     }
 
     @Override
-    public void update(Orders object) {
+    public void update(Orders orders) {
+        session.update(orders);
 
     }
 
     @Override
-    public Orders get(Long aLong) {
-        return null;
+    public Orders get(Long oId) {
+        return session.get(Orders.class,oId);
     }
 
     @Override
@@ -85,6 +86,15 @@ public class OrderRepositoryImpl implements OrderRepository {
             e.printStackTrace();
             return Collections.emptyList(); // or throw a custom exception
         }
+    }
+
+    @Override
+    public List<Orders> getAll() {
+        String hql = "FROM Orders ";
+        org.hibernate.query.Query query = session.createQuery(hql);
+        List list = query.list();
+        session.close();
+        return list;
     }
 
 

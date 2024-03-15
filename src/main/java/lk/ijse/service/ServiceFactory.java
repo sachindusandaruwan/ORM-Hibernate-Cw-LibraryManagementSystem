@@ -10,7 +10,7 @@ public class ServiceFactory {
         return serviceFactory == null ? new ServiceFactory() : serviceFactory;
     }
     public enum ServiceTypes{
-        LOGIN, USER,BOOK,BRANCH,ORDER,ORDER_DETAIL,PLACE_ORDER
+        LOGIN, USER,BOOK,BRANCH,ORDER,ORDER_DETAIL,PLACE_ORDER,RETURN_BOOK
     }
 
     public SuperService getService(ServiceTypes serviceTypes){
@@ -22,6 +22,7 @@ public class ServiceFactory {
             case ORDER:return new OrderServiceImpl();
             case ORDER_DETAIL:return new OrderDetailServiceImpl();
             case PLACE_ORDER:return new PlaceOrderServiceImpl();
+            case RETURN_BOOK: return new ReturnBookServiceImpl();
             default: return null;
         }
     }

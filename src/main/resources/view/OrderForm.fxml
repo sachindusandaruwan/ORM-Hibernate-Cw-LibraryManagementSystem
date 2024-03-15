@@ -9,72 +9,118 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="628.0" prefWidth="986.0" style="-fx-background-color: #271D10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.OrderFormController">
    <children>
-      <ImageView fx:id="userMangement" fitHeight="565.0" fitWidth="347.0" layoutX="518.0" layoutY="48.0">
+      <ImageView fx:id="userMangement" fitHeight="565.0" fitWidth="347.0" layoutX="492.0" layoutY="48.0">
          <image>
             <Image url="@../assest/book___b-removebg-preview.png" />
          </image>
       </ImageView>
-      <Label layoutX="19.0" layoutY="40.0" prefHeight="49.0" prefWidth="93.0" text="Order" textFill="#eaff00">
+      <Label layoutX="19.0" layoutY="11.0" prefHeight="49.0" prefWidth="86.0" text="Order" textFill="#eaff00">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="125.0" layoutY="40.0" prefHeight="49.0" prefWidth="192.0" text="Management" textFill="WHITE">
+      <Label layoutX="104.0" layoutY="11.0" prefHeight="49.0" prefWidth="192.0" text="Book" textFill="WHITE">
          <font>
             <Font name="System Bold" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="820.0" layoutY="552.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefHeight="25.0" prefWidth="131.0" text="Place Order" />
-      <TextField fx:id="txtSearchName" layoutX="41.0" layoutY="134.0" onAction="#txtSearchBookNameOnAction" prefHeight="25.0" prefWidth="169.0" promptText="Search Book Here" />
-      <ScrollPane layoutX="47.0" layoutY="172.0" prefHeight="200.0" prefWidth="200.0">
+      <Button layoutX="829.0" layoutY="554.0" mnemonicParsing="false" onAction="#btnPlaceOrderOnAction" prefHeight="39.0" prefWidth="122.0" style="-fx-background-color: yellow; -fx-background-radius: 12;" text="Place Order" />
+      <TextField fx:id="txtSearchName" layoutX="239.0" layoutY="140.0" onAction="#txtSearchBookNameOnAction" prefHeight="25.0" prefWidth="169.0" promptText="Search Book Here" />
+      <ScrollPane layoutX="33.0" layoutY="231.0" prefHeight="200.0" prefWidth="257.0">
          <content>
-            <VBox fx:id="txtVbox" prefHeight="200.0" prefWidth="200.0" />
+            <VBox fx:id="txtVbox" prefHeight="200.0" prefWidth="259.0" />
          </content>
       </ScrollPane>
-      <Label layoutX="333.0" layoutY="134.0" prefHeight="17.0" prefWidth="122.0" text="Return Date" textFill="#f8f8f8">
+      <Label layoutX="549.0" layoutY="63.0" prefHeight="25.0" prefWidth="122.0" text="Return Date -&gt;" textFill="#f8f8f8">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <DatePicker fx:id="txtReturnDate" layoutX="326.0" layoutY="168.0" />
-      <TextField fx:id="txtBookId" layoutX="163.0" layoutY="391.0" onAction="#txtSearchBookId" />
-      <Label layoutX="41.0" layoutY="391.0" prefHeight="17.0" prefWidth="122.0" text="Enter Book id" textFill="#f8f8f8">
+      <DatePicker fx:id="txtReturnDate" layoutX="680.0" layoutY="63.0" prefHeight="25.0" prefWidth="257.0" />
+      <TextField fx:id="txtBookId" layoutX="308.0" layoutY="406.0" onAction="#txtSearchBookId" promptText="Enter Book Id Here" />
+      <Label layoutX="308.0" layoutY="371.0" prefHeight="17.0" prefWidth="122.0" text="Enter Book id" textFill="#f8f8f8">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblBookName" layoutX="47.0" layoutY="440.0" prefHeight="25.0" prefWidth="264.0" textFill="WHITE">
+      <Label fx:id="lblBookName" layoutX="27.0" layoutY="489.0" prefHeight="25.0" prefWidth="264.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblAutor" layoutX="47.0" layoutY="481.0" prefHeight="25.0" prefWidth="264.0" textFill="WHITE">
+      <Label fx:id="lblAutor" layoutX="27.0" layoutY="567.0" prefHeight="25.0" prefWidth="264.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lableCatagary" layoutX="41.0" layoutY="513.0" prefHeight="25.0" prefWidth="264.0" textFill="WHITE">
+      <Label fx:id="lableCatagary" layoutX="308.0" layoutY="489.0" prefHeight="25.0" prefWidth="264.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblPublishedDate" layoutX="31.0" layoutY="565.0" prefHeight="25.0" prefWidth="264.0" textFill="WHITE">
+      <Label fx:id="lblPublishedDate" layoutX="308.0" layoutY="567.0" prefHeight="25.0" prefWidth="264.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblOrderId" layoutX="463.0" layoutY="106.0" prefHeight="17.0" prefWidth="110.0" textFill="#eeeeee">
+      <Label fx:id="lblOrderId" layoutX="882.0" layoutY="11.0" prefHeight="27.0" prefWidth="77.0" textFill="#eeeeee">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserName" layoutX="21.0" layoutY="89.0" prefHeight="33.0" prefWidth="336.0" text="Label" textFill="WHITE">
+      <Label fx:id="lblUserName" layoutX="121.0" layoutY="78.0" prefHeight="33.0" prefWidth="310.0" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="136.0" prefHeight="33.0" prefWidth="200.0" text="Plese Enter Book Name -&gt;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="192.0" prefHeight="33.0" prefWidth="421.0" text="You Can See Book Ids and It Availablity In You searched" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="75.0" prefHeight="39.0" prefWidth="77.0" text="Hiiii ....." textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label text="Label" />
+      <Label layoutX="27.0" layoutY="463.0" prefHeight="17.0" prefWidth="131.0" text="Book Name -" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="120.0" layoutX="128.0" layoutY="515.0" startX="-100.0" stroke="#d9ff00" />
+      <Label layoutX="27.0" layoutY="543.0" prefHeight="17.0" prefWidth="131.0" text="Book Autor -" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="121.0" layoutX="128.0" layoutY="594.0" startX="-100.0" stroke="#d9ff00" />
+      <Label layoutX="308.0" layoutY="463.0" prefHeight="17.0" prefWidth="131.0" text="Book Gener -" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="120.0" layoutX="409.0" layoutY="515.0" startX="-100.0" stroke="#d9ff00" />
+      <Label layoutX="308.0" layoutY="543.0" prefHeight="17.0" prefWidth="131.0" text="Book Gener -" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Line endX="121.0" layoutX="408.0" layoutY="594.0" startX="-100.0" stroke="#d9ff00" />
+      <Label layoutX="772.0" layoutY="11.0" prefHeight="27.0" prefWidth="108.0" text="Order Id --&gt;" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="18.0" />
          </font>
       </Label>
    </children>

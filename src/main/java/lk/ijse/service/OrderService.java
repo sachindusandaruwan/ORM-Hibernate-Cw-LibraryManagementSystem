@@ -12,4 +12,10 @@ public interface OrderService extends SuperService{
 
 
     List<OrdersDto> getOrderByUserId(UserDto userDto);
+
+    List<OrdersDto> getAllOrders();
+
+    OrdersDto get(long orderId);
+
+    boolean updateOrder(OrdersDto ordersDto);
 }

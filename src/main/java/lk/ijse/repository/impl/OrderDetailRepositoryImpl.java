@@ -7,6 +7,8 @@ import lk.ijse.repository.OrderRepository;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
+import java.util.List;
+
 public class OrderDetailRepositoryImpl implements OrderDetailRepository {
     private Session session;
     @Override
@@ -46,6 +48,15 @@ public class OrderDetailRepositoryImpl implements OrderDetailRepository {
     public boolean saveOrderDetail(OrderDetail orderDetail) {
         session.save(orderDetail);
         return true;
+    }
+
+    @Override
+    public List<OrderDetail> getAll() {
+        String hql = "FROM OrderDetail ";
+        org.hibernate.query.Query query = session.createQuery(hql);
+        List list = query.list();
+        session.close();
+        return list;
     }
 
 

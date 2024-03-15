@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="628.0" prefWidth="986.0" style="-fx-background-color: #271D10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LibraryFormController">
+<AnchorPane prefHeight="628.0" prefWidth="986.0" style="-fx-background-color: #271D10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DetailsFormController">
    <children>
       <ImageView fx:id="userMangement" fitHeight="565.0" fitWidth="347.0" layoutX="518.0" layoutY="48.0">
          <image>
@@ -26,16 +28,16 @@
          </font>
       </Label>
       <TableView fx:id="tblOrderBookDetails" layoutX="47.0" layoutY="139.0" prefHeight="448.0" prefWidth="900.0">
-        <columns>
-          <TableColumn fx:id="colO_Id" prefWidth="75.0" text="O_Id" />
-          <TableColumn fx:id="colB_Nmae" prefWidth="175.0" text="Book Name" />
-            <TableColumn fx:id="colB_Id" prefWidth="100.0" text="B_Id" />
-            <TableColumn fx:id="colB_Date" prefWidth="130.0" text="Borrowed Date" />
-            <TableColumn fx:id="colDDate" prefWidth="130.0" text="Due Date" />
-            <TableColumn fx:id="colRDate" prefWidth="130.0" text="Return Date" />
-            <TableColumn fx:id="colU_Id" text="U_Id" />
-            <TableColumn fx:id="colOption" text="Option" />
-        </columns>
+         <columns>
+            <TableColumn fx:id="colO_Id" prefWidth="75.0" text="O_Id" />
+            <TableColumn fx:id="colB_Nmae" prefWidth="225.0" text="Book Name" />
+            <TableColumn fx:id="colB_Id" prefWidth="150.0" text="B_Id" />
+            <TableColumn fx:id="colDDate" prefWidth="175.0" text="Due Date" />
+            <TableColumn fx:id="colRDate" prefWidth="175.0" text="Returned Date" />
+            <TableColumn fx:id="colU_Id" prefWidth="100.0" text="U_Id" />
+         </columns>
       </TableView>
+      <TextField fx:id="txtOrderId" layoutX="617.0" layoutY="97.0" onAction="#txtSearchOrderId" promptText="Search Order Id here" />
+      <Button layoutX="848.0" layoutY="97.0" mnemonicParsing="false" onAction="#btnRetunOnAction" prefHeight="25.0" prefWidth="90.0" text="Return" />
    </children>
 </AnchorPane>

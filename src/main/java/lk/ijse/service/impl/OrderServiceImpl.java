@@ -8,7 +8,9 @@ import lk.ijse.repository.RepositoryFactory;
 import lk.ijse.service.OrderService;
 import lk.ijse.service.ServiceFactory;
 import lk.ijse.util.SessionFactoryConfig;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -65,6 +67,44 @@ public class OrderServiceImpl implements OrderService {
             e.printStackTrace();
             return Collections.emptyList(); // or throw a custom exception
         }
+    }
+
+    @Override
+    public List<OrdersDto> getAllOrders() {
+        session = SessionFactoryConfig.getInstance().getSession();
+        orderRepository.setSession(session);
+        List<Orders> all = orderRepository.getAll();
+        List<OrdersDto> dtoList = new ArrayList<>();
+        for (Orders orders : all){
+            dtoList.add(orders.toDto());
+        }
+        return dtoList;
+    }
+
+    @Override
+    public OrdersDto get(long orderId) {
+        session = SessionFactoryConfig.getInstance().getSession();
+        orderRepository.setSession(session);
+        return orderRepository.get(orderId).toDto();
+    }
+
+    @Override
+    public boolean updateOrder(OrdersDto ordersDto) {
+        session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            orderRepository.setSession(session);
+            orderRepository.update(ordersDto.toEntity());
+            transaction.commit();
+            session.close();
+            return true;
+        } catch (HibernateException e) {
+            transaction.rollback();
+            session.close();
+            e.printStackTrace();
+            return false;
+        }
+
     }
 
 }

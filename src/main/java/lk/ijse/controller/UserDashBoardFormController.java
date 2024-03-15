@@ -19,11 +19,20 @@ public class UserDashBoardFormController {
 
     public void initialize() throws IOException {
         DateAndTime.manageDateAndTime(lblDateAndTime);
-        Navigation.switchPaging(contentContext,"OrderForm.fxml","Users");
+        Navigation.switchPaging(contentContext,"OrderForm.fxml","Order");
     }
 
     @FXML
-    void btnOrder(ActionEvent event) {
+    void btnAccountSettingOnAction(ActionEvent event) throws IOException {
+        Navigation.switchPaging(contentContext,"AccountForm.fxml","Account");
+
+
+    }
+
+    @FXML
+    void btnOrder(ActionEvent event) throws IOException {
+        Navigation.switchPaging(contentContext,"OrderForm.fxml","Order");
+
 
     }
 
